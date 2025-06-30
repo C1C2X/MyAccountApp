@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#71D9E7">
+
+    <ImageView
+        android:id="@+id/LOGO"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/j" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LOGO"
+        android:layout_centerHorizontal="true"
+        android:text="每日记账"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+</RelativeLayout>

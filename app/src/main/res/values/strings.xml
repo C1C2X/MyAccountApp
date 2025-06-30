@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyAccountApp</string>
+    <string name="month_expense">月度收入支出</string>
+    <string name="year_expense">年度收入支出</string>
+    <string name="data_analysis">数据分析</string>
+    <string name="add_account_description">添加账户</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/expense_buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <!-- 月度收入支出按钮 -->
+        <Button
+            android:id="@+id/month_expense_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:onClick="goToMonthExpenseActivity"
+            android:text="月度收入支出"
+            android:scaleType="centerInside" />
+
+        <!-- 年度收入支出按钮 -->
+        <Button
+            android:id="@+id/year_expense_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToYearExpenseActivity"
+            android:text="年度收入支出"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <!-- 数据分析按钮 -->
+    <Button
+        android:id="@+id/data_analysis_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expense_buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="goToLineAnalysis"
+        android:text="数据分析" />
+
+
+    <ListView
+        android:layout_below="@+id/data_analysis_button"
+        android:id="@+id/list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="650dp" >
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/add"
+        android:onClick="addAccount"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+        android:background="#00FF0000"
+        android:src="@drawable/img"
+        android:layout_below="@+id/list_view"
+        android:layout_gravity="bottom" />
+
+</RelativeLayout>

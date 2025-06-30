@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- 年份选择器 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <!-- 年份选择器 -->
+        <Spinner
+            android:id="@+id/sp_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+
+            android:textSize="20sp"
+        android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <!-- 显示收入 -->
+    <TextView
+        android:id="@+id/tv_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收入: 0"
+        android:textSize="22sp"
+        android:textColor="#ffbd27"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:gravity="center"/>
+
+    <!-- 显示支出 -->
+    <TextView
+        android:id="@+id/tv_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支出: 0"
+        android:textSize="22sp"
+        android:textColor="#ff0000"
+        android:layout_below="@id/tv_income"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+
+    <!-- 返回按钮 -->
+    <Button
+        android:id="@+id/btn_back3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_expense"
+        android:text="返回主界面"
+        android:layout_margin="20dp"
+        android:onClick="backButton3"/>
+</RelativeLayout>

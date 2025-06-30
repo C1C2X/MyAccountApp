@@ -1,0 +1,117 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- 标题输入框 -->
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="4dp"
+        android:hint="标题"
+        android:textColor="#ffbd27"
+        android:textSize="30dp" />
+
+    <!-- 金额输入框 -->
+    <EditText
+        android:id="@+id/et_money"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="4dp"
+        android:hint="金额"
+        android:inputType="numberDecimal"
+        android:textColor="#ffbd27"
+        android:textSize="30dp" />
+
+    <!-- 收入/支出选择 -->
+    <RadioGroup
+        android:id="@+id/rg_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收入"
+            android:textSize="30dp" />
+
+        <RadioButton
+            android:id="@+id/rb_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支出"
+            android:textSize="30dp" />
+    </RadioGroup>
+
+    <!-- 日期选择器 -->
+    <DatePicker
+        android:id="@+id/dp_date"
+        android:layout_width="422dp"
+        android:layout_height="238dp"
+        android:layout_margin="8dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <!-- 图片显示区域 -->
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_menu_camera" /> <!-- 默认占位图 -->
+
+    <!-- 选择图片按钮 -->
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择图片"
+        android:onClick="uploadPhoto"
+        android:layout_gravity="center" />
+
+    <!-- 按钮区 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- 保存按钮 -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存" />
+
+        <!-- 返回主界面按钮 -->
+        <Button
+            android:id="@+id/btn_back2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="返回主界面"
+            android:onClick="backButton2"
+            android:layout_marginStart="8dp" />
+
+        <!-- 删除按钮 (新增) -->
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除记录"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF0000"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</LinearLayout>
